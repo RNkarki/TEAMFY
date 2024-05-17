@@ -13,6 +13,10 @@ main {
   background: #6610f2;
 }
 
+nav{
+  background-color: black;
+}
+
 .container {
   max-width: 1300px;
   width: 100%;
@@ -112,6 +116,12 @@ a {
 }
 
 /* Reponsive */
+@media (max-width: 1920px){
+  .child-img{
+    width: 80%;
+  }
+}
+
 @media (width < 860px) {
   #menu_toggle {
     display: block;
@@ -176,7 +186,7 @@ a {
 }
 
 /*About section*/
-.footer, .footer-para{
+/* .footer, .footer-para, .footer-about{
   display: flex;
   justify-content: center;  
   align-items: center;
@@ -186,6 +196,10 @@ a {
 
 .footer-para{
   margin-top: 0;
+}
+
+.footer-about{
+  margin-top: 20px;
 }
 
 
@@ -204,3 +218,72 @@ a {
   font-style: normal;
   font-size: 50px;
 } 
+
+.para{
+  width: 50%;
+} */
+
+.reveal{
+  position: relative;
+  transform: translate(-150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.reveal.active{
+  transform: translate(0px);
+  opacity: 1;
+} 
+
+.footer-app{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 150px;
+}
+
+.dwn, .app{
+  font-family: "Oleo Script", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  display: block;
+}
+
+.ambition{
+  width: 50%;
+}
+
+.install{
+  width: 30%;
+}
+
+@media (width < 860px){
+  .footer-app{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+    margin-top: 50px;
+  }
+
+  .dwn, .app{
+    font-family: "Oleo Script", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    display: block;
+  }
+
+  .ambition{
+    width: 100%;
+  }
+
+  .install{
+    width: 70%;
+  }
+
+  .mobile-view{
+    width: 50%;
+  }
+}
